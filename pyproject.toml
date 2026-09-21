@@ -1,0 +1,16 @@
+[project]
+name = "rapports-suivi-chantier"
+version = "0.1.0"
+description = "Génération des rapports Word (hebdo + réserves) à partir des données Kobo/PostGIS"
+requires-python = ">=3.11"
+dependencies = [
+    "streamlit>=1.38",
+    "pandas>=2.2",
+    "sqlalchemy>=2.0",
+    "psycopg2-binary>=2.9",
+    "python-docx>=1.1",
+    "docxtpl>=0.19",
+    "requests>=2.32",
+    "python-dotenv>=1.0",
+    "pillow>=10.0",
+]
