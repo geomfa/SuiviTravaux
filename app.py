@@ -14,7 +14,7 @@ if "config_dir" not in st.session_state:
     st.session_state.config_dir = ""
 
 
-st.set_page_config(page_title="Rapports de suivi de chantier", page_icon="📋", layout="centered")
+st.set_page_config(page_title="Rapports de suivi de chantier", page_icon="🚧", layout="centered")
 st.title("Rapports de suivi de chantier")
 
 tab_config, tab_hebdo, tab_reserves = st.tabs(["Configuration","Rapport hebdomadaire", "Rapport réserves"])
@@ -23,10 +23,11 @@ with tab_config:
     st.subheader("Configuration")
 
     config_dir = st.text_input(
-        "Dossier de configuration",
+        "Saisir le chemin du dossier de configuration",
         value=st.session_state.config_dir,
         placeholder=r"C:\fichiers_config"
     )
+    st.markdown('<p style="font-size:14px; color:grey;">Dossier de configuration type dans /IT_Suivi_travaux/SuiviTravaux_fichiers_config/</p>',unsafe_allow_html=True)
 
     if st.button("Enregistrer la configuration"):
         chemin = Path(config_dir)
